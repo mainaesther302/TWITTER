@@ -1,0 +1,34 @@
+<!-- home.component.html -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="container">
+    <h1 class="header">Twitter Clone</h1>
+    <div class="form-group">
+      <label for="name">Search User:</label>
+      <select formControlName="name" id="name" class="form-control">
+        <option value="1">Leanne Graham</option>
+        <option value="2">Ervin Howell</option>
+        <option value="3">Clementine Bauch</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <button type="submit" class="btn-submit">Submit</button>
+  </form>
+  
+  <div *ngIf="userData" class="user-data">
+    <h2>User Data</h2>
+    <div class="data-item">
+      <strong>Name:</strong> {{ userData.name }}
+    </div>
+    <div class="data-item">
+      <strong>Username:</strong> {{ userData.username }}
+    </div>
+    <div class="data-item">
+      <strong>Email:</strong> {{ userData.email }}
+    </div>
+    <div class="data-item">
+      <strong>Website:</strong> {{ userData.website }}
+    </div>
+    <div class="data-item">
+      <strong>Company:</strong> {{ userData.company.name }}
+    </div>
+  </div>
+  

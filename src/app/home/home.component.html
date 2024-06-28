@@ -1,0 +1,15 @@
+<div class="mainContainer">
+    <div *ngIf="posts" class="postsContainer">
+      <div *ngFor="let postone of posts" class="onePost">
+        <div class="PersonImage">
+          <img src="{{ postone.image }}" alt="postone Image">
+        </div>
+        <div class="postDetails">
+          <p class="postName">{{ postone.name }}</p>
+          <p class="postLocation">{{ postone.hlocation }}</p>
+          <p class="postRating">Rating: {{ postone.rating }}</p>
+        
+        </div>
+      </div>
+    </div>
+  </div>
